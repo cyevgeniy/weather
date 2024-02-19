@@ -1,75 +1,26 @@
-# Nuxt 3 Minimal Starter
+## Task
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Виджет погоды на Nuxt3
 
-## Setup
+### Цель
 
-Make sure to install the dependencies:
+Разработать виджет погоды с использованием Nuxt3, который
+показывает текущую погоду и прогноз на ближайшие три дня для
+выбранного пользователем города. Виджет должен использовать
+Composition API для управления состоянием.
 
-```bash
-# npm
-npm install
+### Основные требования
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+1 Структура проекта: Инициализируйте новый проект Nuxt3.
+2 Получение данных: Используйте Axios или Fetch для запроса
+данных о погоде с любого открытого API погоды, например,
+OpenWeatherMap.
+3 Компоненты:
+a. Создайте компонент для отображения текущей погоды:
+температура, влажность, скорость ветра, иконка погоды.
+b. Компонент для отображения прогноза погоды на три дня
+вперед.
+4 Пользовательский ввод: Реализуйте форму для ввода названия
+города, погода в котором должна отображаться.
+5 Обработка ошибок: Отображайте сообщение об ошибке, если
+данные о погоде не могут быть получены.
