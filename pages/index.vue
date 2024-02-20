@@ -22,7 +22,7 @@ function onSubmit() {
           </button>
         </div>
       </form>
-      <div class="mt-2">
+      <div class="mt-4">
         <div v-if="loading">
           Загрузка...
         </div>
