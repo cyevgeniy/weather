@@ -27,13 +27,6 @@ const { iconUrl } = useCondition(toRef(props.currentWeather, 'condition'))
     <div class="mb-2">
       Oщущается как {{ currentWeather.feelslike_c }}°C. {{ currentWeather.condition.text }}.
     </div>
-    <div class="border-l-2 border-blue-500 pl-2">
-      <div class="flex items-center">
-        <Icon size="1rem" name="material-symbols-light:humidity-percentage-outline" /> {{ currentWeather.humidity }}%
-      </div>
-      <div class="flex items-center">
-        <Icon size="1rem" name="ph:wind-duotone" /> {{ currentWeather.wind_kph }}&nbsp;км/ч.
-      </div>
-    </div>
+    <WeatherParams :humidity="currentWeather.humidity" :wind-speed="currentWeather.wind_kph" />
   </BaseCard>
 </template>
