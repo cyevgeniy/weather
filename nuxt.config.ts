@@ -4,5 +4,13 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',
+    'nuxt-icon',
   ],
+  app: {
+    head: {
+      bodyAttrs: {
+        class: 'bg-slate-100',
+      },
+    },
+  },
 })
