@@ -14,10 +14,16 @@ export interface KTextFieldProps {
    * Max length
    */
   maxLength?: number
+
+  /**
+   * Set focus in the input automatically
+   */
+  autofocus?: boolean
 }
 const props = withDefaults(defineProps<KTextFieldProps>(), {
   state: 'normal',
   maxLength: 1000,
+  autofocus: false,
 })
 
 const emit = defineEmits<{
@@ -52,6 +58,7 @@ function getValue(e: Event): string {
   <input
     ref="input"
     type="text"
+    :autofocus="autofocus"
     :value="text"
     :placeholder="placeholder"
     :maxlength="maxLength"

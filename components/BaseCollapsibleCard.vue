@@ -21,7 +21,7 @@ function toggleOpen() {
           <Icon
             name="material-symbols:keyboard-arrow-up-rounded" class="w-full h-full"
             :class="{
-              'rotate-180': open,
+              'rotate-180': !open,
             }"
           />
         </div>

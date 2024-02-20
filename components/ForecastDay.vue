@@ -18,7 +18,7 @@ const { iconUrl } = useCondition(toRef(props.dayinfo.day, 'condition'))
         <div class="flex items-center gap-2">
           <img :src="iconUrl" class="w-4 h-4">
 
-          <div class="font-semibold text-xl w-16">
+          <div class="font-semibold text-xl w-20">
             {{ dayinfo.day.avgtemp_c }}°C
           </div>
         </div>
