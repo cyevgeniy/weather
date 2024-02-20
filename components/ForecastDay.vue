@@ -23,12 +23,15 @@ const { iconUrl } = useCondition(toRef(props.dayinfo.day, 'condition'))
           </div>
         </div>
 
-        <div class="text-sm ">
+        <div class="hidden sm:inline-block text-sm ">
           {{ dayinfo.day.condition.text }}
         </div>
       </div>
     </template>
 
+    <div class="block sm:hidden text-sm mb-2 ">
+      {{ dayinfo.day.condition.text }}
+    </div>
     <WeatherParams :humidity="dayinfo.day.avghumidity" :wind-speed="dayinfo.day.maxwind_kph" />
   </BaseCollapsibleCard>
 </template>
