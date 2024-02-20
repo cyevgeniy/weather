@@ -49,6 +49,7 @@ export interface ForecastDayInfo {
     condition: Condition
     maxwind_kph: number
     avghumidity: number
+    feelslike_c: number
   }
 }
 

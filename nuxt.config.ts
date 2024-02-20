@@ -5,7 +5,12 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',
     'nuxt-icon',
+    'dayjs-nuxt',
   ],
+  dayjs: {
+    locales: ['ru', 'en'],
+    defaultLocale: 'ru',
+  },
   app: {
     head: {
       bodyAttrs: {

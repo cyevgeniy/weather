@@ -10,7 +10,7 @@ const { iconUrl } = useCondition(toRef(props.currentWeather, 'condition'))
 </script>
 
 <template>
-  <BaseCard>
+  <BaseCard class="p-3">
     <div class="text-xs text-blue-500 mb-1">
       {{ currentWeather.last_updated }}
     </div>

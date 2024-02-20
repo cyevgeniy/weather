@@ -64,12 +64,22 @@ const showCurrentWeather = computed(() => {
         </div>
 
         <template v-if="showCurrentWeather">
-          <ForecastDay
-            v-for="dayinfo in weather!.forecast.forecastday"
-            :key="dayinfo.date"
-            :dayinfo="dayinfo"
-          />
+          <div class="flex flex-col gap-1 sm:gap-2 mt-2">
+            <ForecastDay
+              v-for="dayinfo in weather!.forecast.forecastday"
+              :key="dayinfo.date"
+              :dayinfo="dayinfo"
+            />
+          </div>
         </template>
+
+        <BaseCollapsibleCard>
+          <template #header>
+            <div> Hello</div>
+          </template>
+
+          <div> Content </div>
+        </BaseCollapsibleCard>
       </div>
     </div>
   </div>
