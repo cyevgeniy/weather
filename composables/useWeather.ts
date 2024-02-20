@@ -10,6 +10,10 @@ export function useWeather() {
   const qry = ref('')
 
   const weather = ref<Weather | undefined>()
+
+  // Forcast data for next limit - 1 days.
+  // We exclude the first item because we use 'current' field to display weather info for it
+  const forecast = computed(() => weather.value?.forecast.forecastday.slice(1) ?? [])
   const loading = ref(false)
 
   // Weatherapi returns error objects only in English, so
@@ -61,6 +65,7 @@ export function useWeather() {
   return {
     qry,
     weather,
+    forecast,
     error,
     loading,
     showCurrentWeather,

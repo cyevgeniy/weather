@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { weather, qry, loading, error, showCurrentWeather, searchWeather } = useWeather()
+const { weather, forecast, qry, loading, error, showCurrentWeather, searchWeather } = useWeather()
 
 function onSubmit() {
   searchWeather()
@@ -32,7 +32,7 @@ function onSubmit() {
         <template v-if="showCurrentWeather">
           <div class="flex flex-col gap-1 sm:gap-2 mt-2">
             <ForecastDay
-              v-for="dayinfo in weather!.forecast.forecastday"
+              v-for="dayinfo in forecast"
               :key="dayinfo.date"
               :dayinfo="dayinfo"
             />
