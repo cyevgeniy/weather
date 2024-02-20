@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import ForecastWidget from '~/components/ForecastWidget.vue'
+
 const { weather, forecast, qry, loading, error, showCurrentWeather, searchWeather } = useWeather()
 
 function onSubmit() {
@@ -30,13 +32,7 @@ function onSubmit() {
         </div>
 
         <template v-if="showCurrentWeather">
-          <div class="flex flex-col gap-1 sm:gap-2 mt-2">
-            <ForecastDay
-              v-for="dayinfo in forecast"
-              :key="dayinfo.date"
-              :dayinfo="dayinfo"
-            />
-          </div>
+          <ForecastWidget title="Прогноз на 3 дня" :forecast="forecast" class="mt-4" />
         </template>
       </div>
     </div>
