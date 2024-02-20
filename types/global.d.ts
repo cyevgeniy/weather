@@ -10,17 +10,19 @@ export interface Location {
   localtime: string
 }
 
+export interface Condition {
+  text: string
+  icon: string
+  code: number
+}
+
 export interface CurrentWeatherInfo {
   last_updated_epoch: number
   last_updated: string
   temp_c: number
   temp_f: number
   is_day: number // 0-1
-  condition: {
-    text: string
-    icon: string
-    code: number
-  }
+  condition: Condition
   wind_mph: number
   wind_kph: number
   wind_degree: number
@@ -38,6 +40,26 @@ export interface CurrentWeatherInfo {
   uv: number
   gust_mph: number
   gust_kph: number
+}
+
+export interface ForecastDayInfo {
+  date: string
+  day: {
+    avgtemp_c: number
+    condition: Condition
+    maxwind_kph: number
+    avghumidity: number
+  }
+}
+
+export interface Forecast {
+  forecastday: ForecastDayInfo[]
+}
+
+export interface Weather {
+  location: Location
+  current: CurrentWeatherInfo
+  forecast: Forecast
 }
 
 // "last_updated_epoch": 1708385400,

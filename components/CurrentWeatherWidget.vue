@@ -6,7 +6,7 @@ const props = defineProps<{
   currentWeather: CurrentWeatherInfo
 }>()
 
-const iconUrl = computed(() => `https:${props.currentWeather.condition.icon}`)
+const { iconUrl } = useCondition(toRef(props.currentWeather, 'condition'))
 </script>
 
 <template>
